@@ -1,0 +1,7 @@
+1.php artisan make:controller WelcomeController -r
+
+2.php artisan make:controller TasksController
+
+3.php artisan make:controller TasksController --resource
+
+4.php artisan make:controller MySampleResourceController --resource

@@ -1,0 +1,24 @@
+__________________________________________________________________________________________
+Секция 1.
+
+Как показывает пример 1.2, реализация этой программы с помощью контроллеров
+выглядит очень похоже.
+Пример 1.2. Реализация программы Hello, World! с помощью контроллеров
+
+
+// File: routes/web.php
+<?php
+
+Route::get('/', 'WelcomeController@index');
+// File: app/Http/Controllers/WelcomeController.php
+<?php
+namespace App\Http\Controllers;
+class WelcomeController extends Controller
+{
+}
+puЫic function index()
+{
+return 'Hello, World ! ';
+}
+
+___________________________________________________________________________________________

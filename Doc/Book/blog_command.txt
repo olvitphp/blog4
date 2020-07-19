@@ -1,0 +1,78 @@
+1. php artisan -V Версия
+2. php artisan make:model Models/BlogCategory -m создаем папку, модель, мирацию.
+3. php artisan make:model Models/BlogPost -m     создаем папку, модель, мирацию.
+4. php artisan migrate записіваем таблици в Б/Д.
+
+Урок 6-7
+
+5. php artisan make:seeder UsersTableSeeder
+6. php artisan make:seeder BlogCategoriesTableSeeder
+7. php artisan db:seed
+8. php artisan db:seed --ClassUsersTableSeeder
+9. php artisan migrate:refresh --seed
+10. php artisan make:factory BlogPostFactory
+11. php artisan make:factory UserFactory
+12. composer dump-autoload
+    Решение проблемы с
+    ( Target class [UsersTableSeeder] does not exist.) 1.txt
+     use Illuminate\Support\Str;-без строки не работает
+
+Урок 8 Контроллеры
+
+13. php artisan make:controller RestTestController --resource
+14  php artisan route:list
+
+Урок 9 Контроллеры
+
+15. php artisan make:controller Blog/BaseController
+16. php artisan make:controller Blog/PostController --resource
+
+    Урок 11 Верстка из коробки
+
+17. composer require laravel/ui (для 6/7 версии Laravel)
+18. php artisan ui vue --auth
+(редактируем config/auth.php, models/user.php)
+(добавляем bootstrap в файл app.blade.php)
+
+    Урок 12 Контролер управления категориями
+19. php artisan make:controller Blog/Admin/CategoryController --resource
+20. php artisan route:list > routes.txt
+    Урок 22-23
+21. php artisan make:request BlogCategoryUpdateRequest
+22. php artisan migrate:refresh --seed
+23. php artisan make:request BlogCategoryCreateRequest
+    Урок 28
+24. composer require jason-guru/laravel-make-repository --dev
+24. php artisan make:repository CoreRepository
+25. php artisan make:repository BlogCategoryRepository
+    Урок 32
+26. php artisan make:controller Blog\Admin\PostController -r
+27. php artisan make:repository BlogPostRepository
+     Урок 33
+28. composer update обновление версии Laravel 7.3->7.5.2
+29. php artisan make:component AppLayout (работа с блейдовскими шаблонами)
+    Урок 40
+30. php artisan make:request BlogPostUpdateRequest
+
+
+    Урок 41
+31. php artisan make:observer BlogPostObserver --model=Models\BlogPost
+32. php artisan make:observer BlogCategoryObserver --model=Models\BlogCategory
+
+     Урок 43
+33. php artisan make:request BlogPostCreateRequest
+
+     Урок 48
+ 34. php artisan make:controller DiggingDeeperController
+
+Урок 52
+35. php artisan queue:table
+36. php artisan queue:failed-table
+37. php artisan make:job BlogPostAfterCreateJob
+38. php artisan make:job BlogPostAfterDeleteJob
+39. php artisan make:job ProcessVideoJob
+
+
+
+ Урок 52 последний 15.05.20
+

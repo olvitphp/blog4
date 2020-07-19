@@ -1,0 +1,78 @@
+
+________________________________________________________________________________________________________
+Via Composer Create-Project
+Alternatively, you may also install Laravel by issuing the Composer create-project command in your terminal:
+
+composer create-project --prefer-dist laravel/laravel blog
+
+Установка Laravel E
+_____________________________________________________________________________________________________
+
+ Урок 2
+ Установка helper
+1. composer require --dev barryvdh/laravel-ide-helper
+
+___________________________________________________________________________________________________
+Установка debugbar
+2. composer require barryvdh/laravel-debugbar --dev
+
+____________________________________________________________________________________________________
+3. php composer.phar update
+
+Урок 4
+
+4. php artisan make:model Models/BlogCategory -m
+5. php artisan make:model Models/BlogPost -m
+
+Урок 5
+6. php artisan migrate
+ или
+7. php artisan migrate:refresh
+
+
+
+Урок 6-7
+
+5. php artisan make:seeder UsersTableSeeder
+6. php artisan make:seeder BlogCategoriesTableSeeder
+7. php artisan make:factory BlogPostFactory
+8. composer dump-autoload
+
+ Решение проблемы с
+     ( Target class [UsersTableSeeder] does not exist.) 1.txt
+      use Illuminate\Support\Str;-без строки не работает
+__________________________________________________________________________________
+9. php artisan db:seed
+8!. php artisan db:seed --ClassUsersTableSeeder
+9!. php artisan migrate:refresh --seed
+__________________________________________________________________________________
+
+Урок 8
+10. php artisan make:controller RestTestController --resource
+
+Урок 9-10.
+11. php artisan make:controller Blog/BaseController
+12. php artisan make:controller Blog/PostController --resource
+
+  Урок 12 Контролер управления категориями
+19. php artisan make:controller Blog/Admin/CategoryController --resource
+20. php artisan route:list > routes.txt
+
+ Урок 13 Контролер управления категориями
+ php artisan make:controller Blog/Admin/BaseController
+
+ Урок 14 Вівод всех категорий.
+Laravel урок №:16 [ Страница редактирования категории ]
+Laravel урок №17: [ Продолжение: Страница редактирования категории ]
+Laravel урок №18: [ Продолжение: Страница редактирования категории ]
+Laravel урок №19: [ Изменение (обновление) категории #2 ]
+Laravel урок №20: [Представления - обновление категории #3]
+Laravel урок №21: [ Валидация данных ]
+Laravel урок №22: [ Валидация данных 2. Продолжение ]
+
+21. php artisan make:request BlogCategoryUpdateRequest
+
+Laravel урок №23: [ Добавление категории (insert, create) ]
+
+22. php artisan migrate:refresh --seed
+23. php artisan make:request BlogCategoryCreateRequest
